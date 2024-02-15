@@ -22,7 +22,7 @@ public class Main {
         // Add the new user to the database
         su.ajouter(newUser,role);
 
-        // Retrieve the updated list of users
+        /// Retrieve the updated list of users
      System.out.println("Updated list of users:");
      su.getAll();
 
