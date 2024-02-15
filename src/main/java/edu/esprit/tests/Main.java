@@ -24,7 +24,7 @@ public class Main {
 
         Set<Restaurant> allRestau = r.getAll();
 
-        / /  Display the details of each Personne
+        //  Display the details of each Personne
         for (Restaurant res : allRestau) {
             System.out.println("ID: " + res.getIdR() +
                     ", Nom: " + res.getNomR() +
