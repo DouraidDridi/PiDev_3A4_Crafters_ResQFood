@@ -7,7 +7,7 @@ public class ServiceAvisRestau implements IServiceAvis{
     public void ajouter(Object o) {
 
     }
-//
+/
     @Override
     public void modifier(Object o) {
 
