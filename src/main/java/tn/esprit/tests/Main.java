@@ -19,7 +19,7 @@ public class Main {
 
 
 
-        // Add the new user to the database
+        /// Add the new user to the database
         su.ajouter(newUser,role);
 
         //Retrieve the updated list of users
