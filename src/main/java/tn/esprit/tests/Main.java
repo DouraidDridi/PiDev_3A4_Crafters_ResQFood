@@ -1,8 +1,6 @@
 package tn.esprit.tests;
 
-import tn.esprit.entities.Admin;
-import tn.esprit.entities.Agriculteur;
-import tn.esprit.entities.User;
+import tn.esprit.entities.*;
 import tn.esprit.services.ServiceUser;
 
 public class Main {
@@ -10,12 +8,12 @@ public class Main {
         ServiceUser su = new ServiceUser();
 
         // Create a new user
-        User newUser = new Agriculteur();
-        newUser.setNom("agric");
-        newUser.setPrenom("min");
-        newUser.setEmail("agric.dridi@esprit.tn");
+        User newUser = new User();
+        newUser.setNom("user");
+        newUser.setPrenom("useren");
+        newUser.setEmail("user.useren@esprit.tn");
         newUser.setPassword("secret123");
-        String role = "agriculteur";
+        String role = "";
 
 
 
@@ -33,7 +31,7 @@ public class Main {
         newUser.setEmail("updated.agric.dridi@esprit.tn");
         newUser.setPassword("newSecret123");
         
-        su.modifier(newUser);
+        //su.modifier(newUser);
 
         System.out.println("Updated list of users after modification:");
         su.getAll();
