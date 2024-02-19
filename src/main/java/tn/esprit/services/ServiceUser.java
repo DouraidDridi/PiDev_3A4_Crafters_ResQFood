@@ -261,6 +261,18 @@ public class ServiceUser implements IService<User> {
         return users;
     }
 
-
+    public boolean authenticate(String email, String password) {
+        String req = "SELECT * FROM `user` WHERE `email`=? AND `password`=?";
+        try {
+            PreparedStatement ps = cnx.prepareStatement(req);
+            ps.setString(1, email);
+            ps.setString(2, password);
+            ResultSet res = ps.executeQuery();
+            return res.next(); // If a row is found, authentication is successful
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
 
 }

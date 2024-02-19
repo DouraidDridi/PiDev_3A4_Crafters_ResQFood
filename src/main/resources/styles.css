@@ -1,0 +1,78 @@
+.main-pane {
+    -fx-background-color: #7D48B1; /* Adjust to the specific shade of purple from your image */
+}
+
+.form-container {
+    -fx-padding: 20; /* Adjust padding as needed */
+    -fx-background-color: #FFFFFF; /* White or any other color you prefer for the form background */
+}
+
+.sidebar {
+    -fx-background-color: #331233;
+    -fx-padding: 20px; /* Adjust padding as needed */
+}
+
+.form-container {
+    -fx-padding: 20px; /* Adjust padding as needed */
+}
+/* Other styles remain the same */
+
+.register-text, .text-field, .password-field, .choice-box {
+    -fx-text-fill: #793b3b; /* White text */
+}
+
+.text-field, .password-field, .choice-box {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.register-button, .social-button {
+    -fx-background-color: #7D48B1;
+    -fx-text-fill: white;
+    -fx-background-radius: 20; /* This gives the rounded corners */
+    -fx-padding: 8px 15px;
+}
+
+.register-button:hover, .social-button:hover {
+    -fx-background-color: #9E7DB9; /* A lighter purple for hover effects */
+}
+
+.social-button {
+    -fx-background-radius: 50%; /* Circular buttons for social media */
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+}
+
+/* Specific styles for each social media button if needed */
+/*#facebookButton {*/
+/*    -fx-graphic: url('images/fb.png'); !* Put the path to your Facebook icon here *!*/
+/*}*/
+
+/*#googleButton {*/
+/*    -fx-graphic: url('google.png'); !* Put the path to your Google icon here *!*/
+/*}*/
+
+/*#linkedinButton {*/
+/*    -fx-graphic: url('images/in.png'); !* Put the path to your LinkedIn icon here *!*/
+/*}*/
+
+/* Adjust the font size for the registration text */
+.register-text {
+    -fx-font-size: 24px;
+}
+
+/* Placeholder and input text color in fields */
+.text-field, .password-field, .choice-box {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+}
+
+/* Styles for the form heading */
+.heading {
+    -fx-font-size: 18px; /* Larger size for the heading */
+    -fx-font-weight: bold;
+}
