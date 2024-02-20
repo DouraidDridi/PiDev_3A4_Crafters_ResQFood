@@ -27,12 +27,12 @@
             <stops>
                <Stop>
                   <color>
-                     <Color red="1.0" green="0.6899047493934631" blue="0.11999999731779099" />
+                     <Color red="1.0" green="0.949999988079071" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="0.43421053886413574" green="0.044225145131349564" blue="0.044225145131349564" />
+                     <Color red="1.0" />
                   </color>
                </Stop>
             </stops>

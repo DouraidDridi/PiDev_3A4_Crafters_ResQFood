@@ -4,9 +4,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home">
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.Home">
    <children>
-      <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ResQFood Home is ready !  " wrappingWidth="255.3466796875">
+      <MenuBar>
+         <menus>
+            <Menu text="menu">
+               <items>
+                  <MenuItem fx:id="logoutMenuItem" text="Logout" onAction="#handleLogout"/>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ResQFood tn.esprit.controllers.Home is ready !  " wrappingWidth="255.3466796875">
          <font>
             <Font size="11.0" />
          </font>

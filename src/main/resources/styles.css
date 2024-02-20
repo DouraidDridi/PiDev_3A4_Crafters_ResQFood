@@ -1,5 +1,5 @@
 .main-pane {
-    -fx-background-color: #7D48B1; /* Adjust to the specific shade of purple from your image */
+    -fx-background-color: #ffffff; /* Adjust to the specific shade of purple from your image */
 }
 
 .form-container {
@@ -8,7 +8,7 @@
 }
 
 .sidebar {
-    -fx-background-color: #331233;
+    -fx-background-color: #e50922;
     -fx-padding: 20px; /* Adjust padding as needed */
 }
 
@@ -18,7 +18,7 @@
 /* Other styles remain the same */
 
 .register-text, .text-field, .password-field, .choice-box {
-    -fx-text-fill: #793b3b; /* White text */
+    -fx-text-fill: #091be5; /* White text */
 }
 
 .text-field, .password-field, .choice-box {
@@ -30,14 +30,14 @@
 }
 
 .register-button, .social-button {
-    -fx-background-color: #7D48B1;
+    -fx-background-color: #087a20;
     -fx-text-fill: white;
     -fx-background-radius: 20; /* This gives the rounded corners */
     -fx-padding: 8px 15px;
 }
 
 .register-button:hover, .social-button:hover {
-    -fx-background-color: #9E7DB9; /* A lighter purple for hover effects */
+    -fx-background-color: #087a20; /* A lighter purple for hover effects */
 }
 
 .social-button {

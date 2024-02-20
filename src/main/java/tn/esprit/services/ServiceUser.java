@@ -275,4 +275,20 @@ public class ServiceUser implements IService<User> {
         }
     }
 
+    public String getUserRole(String email) {
+        String role = null;
+        String query = "SELECT roles FROM user WHERE email=?";
+        try (PreparedStatement ps = cnx.prepareStatement(query)) {
+            ps.setString(1, email);
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()) {
+                role = resultSet.getString("roles");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return role;
+    }
+
+
 }

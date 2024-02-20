@@ -36,10 +36,13 @@ public class ConnecterUser {
     private Button registerButton;
 
     @FXML
-    private Label authenticationIndicator;
+    private ProgressIndicator loadingIndicator;
 
     @FXML
     void handleLoginButton(ActionEvent event) {
+        // Show loading indicator
+        loadingIndicator.setVisible(true);
+
         try {
             String emailValue = email.getText();
             String passwordValue = password.getText();
@@ -49,17 +52,27 @@ public class ConnecterUser {
             boolean isAuthenticated = serviceUser.authenticate(emailValue, passwordValue);
 
             if (isAuthenticated) {
-                // Authentication successful, make the green tick visible
-                authenticationIndicator.setVisible(true);
+                // Determine the user's role
+                String userRole = serviceUser.getUserRole(emailValue);
 
-                // Switch to Home.fxml or any other desired scene after a delay (5 seconds in this case)
+                // Switch to tn.esprit.controllers.Home.fxml or any other desired scene after a delay (5 seconds in this case)
                 PauseTransition pauseTransition = new PauseTransition(Duration.seconds(5));
                 pauseTransition.setOnFinished(e -> {
                     try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Home.fxml"));
+                        FXMLLoader loader;
+                        if ("admin".equals(userRole.toLowerCase())) {
+                            // Redirect to dashbord.fxml if the role is admin
+                            loader = new FXMLLoader(getClass().getResource("/DashboardAdmin.fxml"));
+                        } else {
+                            // Otherwise, redirect to tn.esprit.controllers.Home.fxml or another scene
+                            loader = new FXMLLoader(getClass().getResource("/Home.fxml"));
+                        }
                         Parent homeRoot = loader.load();
                         Stage currentStage = (Stage) LoginButton.getScene().getWindow();
                         currentStage.setScene(new Scene(homeRoot));
+
+                        // Close loading indicator after login logic is complete
+                        loadingIndicator.setVisible(false);
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
@@ -70,10 +83,18 @@ public class ConnecterUser {
                 Alert errorAlert = new Alert(Alert.AlertType.ERROR);
                 errorAlert.setTitle("Error");
                 errorAlert.setContentText("Authentication failed!");
+
+                // Close loading indicator in case of authentication failure
+                loadingIndicator.setVisible(false);
+
                 errorAlert.showAndWait();
             }
         } catch (Exception e) {
             // Handle any exceptions
+
+            // Close loading indicator in case of an exception
+            loadingIndicator.setVisible(false);
+
             e.printStackTrace();
         }
     }
