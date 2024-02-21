@@ -47,8 +47,6 @@ public class ServiceUser implements IService<User> {
                 role = "donateur";
             } else if (user instanceof Admin) {
                 role = "admin";
-            } else if (user instanceof Livreur) {
-                role = "livreur";
             } else {
                 role = "USER"; // Default role or an error handling case
             }
