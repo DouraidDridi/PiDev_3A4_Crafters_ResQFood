@@ -1,0 +1,5 @@
+#totalUsersLabel {
+    -fx-font-size: 24;
+    -fx-text-fill: #333;
+    -fx-margin: 10 0 10 0; /* top, right, bottom, left */
+}

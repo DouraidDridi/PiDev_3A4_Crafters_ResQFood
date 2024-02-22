@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.TilePane?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.DashboardAdmin">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.DashboardAdmin">
     <children>
         <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -34,28 +26,28 @@
                         <Insets bottom="20.0" />
                     </VBox.margin>
                 </Label>
-                <Button fx:id="btnProfile" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Profile" textFill="#e7e5e5">
-                    <!-- Modify the button's properties as needed -->
-                </Button>
                 <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Orders">
                     <!-- Modify the button's properties as needed -->
                 </Button>
                 <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Settings">
                     <!-- Modify the button's properties as needed -->
                 </Button>
-                <Button fx:id="btnSignout" onAction="#handleLogout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sign Out">
+                <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sign Out">
                     <!-- Modify the button's properties as needed -->
                 </Button>
             </children>
         </VBox>
         <StackPane fx:id="userContentStackPane" layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #ffffff;">
-            <VBox alignment="CENTER" spacing="10">
+            <stylesheets>
+                <URL value="@DashboardAdmin.css" />
+            </stylesheets>            <VBox alignment="CENTER" spacing="10">
                 <!-- User-specific content goes here -->
-                <Label text="Registered Users" style="-fx-font-size: 18; -fx-font-weight: bold;" />
-                <ScrollPane>
+                <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Registered Users" />
+                <ScrollPane prefHeight="89.0" prefWidth="793.0">
                     <VBox id="userListVBox" spacing="5">
-                        <!-- User labels will be added here dynamically -->
-                    </VBox>
+                  <children>
+                      <Label fx:id="totalUsersLabel" style="-fx-font-size: 24; -fx-text-fill: #333;" text="Total number of users: 0" />
+                  </children></VBox>
                 </ScrollPane>
                 <!-- Center the TableView within the VBox -->
                 <StackPane alignment="CENTER">
@@ -68,8 +60,7 @@
 
 
                 </StackPane>
-                <Button onAction="#ajouter" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="+ Add User"/>
-
+            <Button onAction="#ajouter" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="+ Add User" />
             </VBox>
         </StackPane>
 

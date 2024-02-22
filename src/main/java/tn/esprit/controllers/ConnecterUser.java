@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import tn.esprit.services.ServiceUser;
@@ -27,6 +28,10 @@ public class ConnecterUser {
     private Button LoginButton;
 
     @FXML
+    private Text errorText;
+
+
+    @FXML
     private TextField email;
 
     @FXML
@@ -37,6 +42,8 @@ public class ConnecterUser {
 
     @FXML
     private ProgressIndicator loadingIndicator;
+
+
 
     @FXML
     void handleLoginButton(ActionEvent event) {
@@ -80,14 +87,16 @@ public class ConnecterUser {
                 pauseTransition.play();
             } else {
                 // Authentication failed, show an error message
-                Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-                errorAlert.setTitle("Error");
-                errorAlert.setContentText("Authentication failed!");
+                // Authentication failed, show an error message
+                errorText.setText("Authentication failed!");
+
 
                 // Close loading indicator in case of authentication failure
                 loadingIndicator.setVisible(false);
+                PauseTransition errorTextTransition = new PauseTransition(Duration.seconds(3));
+                errorTextTransition.setOnFinished(e -> errorText.setText(""));
+                errorTextTransition.play();
 
-                errorAlert.showAndWait();
             }
         } catch (Exception e) {
             // Handle any exceptions

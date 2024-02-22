@@ -5,11 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 import tn.esprit.entities.*;
 import tn.esprit.services.ServiceUser;
@@ -38,8 +35,29 @@ public class AjouterUser {
     private Button registerButton;
 
     @FXML
+    private Label successMessage;
+
+
+    @FXML
     private Button Login;
+
+    @FXML
+    private Text nomError;
+
+    @FXML
+    private Text prenomError;
+
+    @FXML
+    private Text emailError;
+
+    @FXML
+    private Text passwordError;
+
+    @FXML
     private ServiceUser serviceUser;
+
+    @FXML
+    private ProgressIndicator loadingIndicator;
 
     public AjouterUser() {
         this.serviceUser = new ServiceUser();
@@ -50,71 +68,130 @@ public class AjouterUser {
         roleChoiceBox.getItems().addAll("User", "Donateur", "RespRestau", "RespAssoc", "Livreur", "Agriculteure");
     }
 
+    private boolean isValidEmail(String email) {
+        // Add your email validation logic here
+        // For simplicity, I'll use a basic email pattern matching
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        return email.matches(emailRegex);
+    }
+
+    private void handleError(TextField textField, Text errorText, String errorMessage) {
+        // Display the error message in the text field
+        textField.setStyle("-fx-border-color: red;");
+        errorText.setText(errorMessage);
+
+    }
+
     @FXML
     void handleRegisterButton(ActionEvent event) {
+        clearErrorMessages(); // Clear previous error messages
+        loadingIndicator.setVisible(true);
+
+        String nomValue = nom.getText();
+        String prenomValue = prenom.getText();
+        String emailValue = email.getText();
+        String passwordValue = password.getText();
+        String selectedRole = roleChoiceBox.getValue();
+
+        if (nomValue.isEmpty()) {
+            handleError(nom, nomError, "Nom is required");
+            return;
+        }
+
+        if (prenomValue.isEmpty()) {
+            handleError(prenom, prenomError, "Prenom is required");
+            return;
+        }
+
+        if (emailValue.isEmpty()) {
+            handleError(email, emailError, "Email is required");
+            return;
+        } else if (!isValidEmail(emailValue)) {
+            handleError(email, emailError, "Invalid email address");
+            return;
+        }
+
+        if (passwordValue.isEmpty()) {
+            handleError(password, passwordError, "Password is required");
+            return;
+        }
+
+        // Check if the email already exists in the database
+        if (serviceUser.emailExists(emailValue)) {
+            handleError(email, emailError, "Email already exists");
+            return;
+        }
+
         try {
-            String nomValue = nom.getText();
-            String prenomValue = prenom.getText();
-            String emailValue = email.getText();
-            String passwordValue = password.getText();
-            String selectedRole = roleChoiceBox.getValue();
+            // Rest of your code for user creation and database interaction
 
-            User newUser;
+            if (validateInputs()) {
+                // Rest of your code for user creation and database interaction
+                User newUser;
 
-            switch (selectedRole) {
-                case "Donateur":
-                    newUser = new Donateur();
-                    break;
-                case "RespRestau":
-                    newUser = new RespResto();
-                    break;
-                case "RespAssoc":
-                    newUser = new RespAssoc();
-                    break;
-                case "Admin":
-                    newUser = new Admin();
-                    break;
-                case "Livreur":
-                    newUser = new Livreur();
-                    break;
-                case "Agriculteure":
-                    newUser = new Agriculteur();
-                    break;
-                default:
-                    newUser = new User();
-                    break;
-            }
+                switch (selectedRole) {
+                    case "Donateur":
+                        newUser = new Donateur();
+                        break;
+                    case "RespRestau":
+                        newUser = new RespResto();
+                        break;
+                    case "RespAssoc":
+                        newUser = new RespAssoc();
+                        break;
+                    case "Admin":
+                        newUser = new Admin();
+                        break;
+                    case "Agriculteure":
+                        newUser = new Agriculteur();
+                        break;
+                    default:
+                        newUser = new User();
+                        break;
+                }
 
-            // Set common attributes
-            newUser.setNom(nomValue);
-            newUser.setPrenom(prenomValue);
-            newUser.setEmail(emailValue);
-            newUser.setPassword(passwordValue);
+                // Set common attributes
+                newUser.setNom(nomValue);
+                newUser.setPrenom(prenomValue);
+                newUser.setEmail(emailValue);
+                newUser.setPassword(passwordValue);
 
-            // Add the new user to the database with the selected role
-            serviceUser.ajouter(newUser, selectedRole);
+                // Add the new user to the database with the selected role
+                serviceUser.ajouter(newUser, selectedRole);
+                // Show a success message
+                successMessage.setText("User added successfully!");
 
-            // Show a success message
-            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
-            successAlert.setTitle("Success");
-            successAlert.setContentText("User added successfully!");
-            successAlert.show();
+                // if register success, navigate to login
+                ActionEvent actionEvent = new ActionEvent();
+                navigatetoAjouterUserAction(actionEvent);
 
-            // if register succes t3ada lil login
-            ActionEvent actionEvent = new ActionEvent();
-            navigatetoAjouterUserAction(actionEvent);
+            } else {
+                loadingIndicator.setVisible(false);          }
         } catch (Exception e) {
             // Show an error message for any exception
-            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-            errorAlert.setTitle("Error");
-            errorAlert.setContentText("Exception: " + e.getMessage());
-            errorAlert.showAndWait();
-
-            // matet3adesh lil login f hala heedhy !
+            handleError(email, emailError, "Exception: " + e.getMessage());
+            loadingIndicator.setVisible(false);
         }
     }
 
-    public void navigatetoAjouterUserAction(ActionEvent actionEvent) {
+    private boolean validateInputs() {
+        // Validation logic, if needed
+        return true;
+    }
+
+    private void clearErrorMessages() {
+        nomError.setText("");
+        prenomError.setText("");
+        emailError.setText("");
+        passwordError.setText("");
+
+        nom.setStyle(null);
+        prenom.setStyle(null);
+        email.setStyle(null);
+        password.setStyle(null);
+    }
+
+    private void navigatetoAjouterUserAction(ActionEvent actionEvent) {
         try {
             // Create a PauseTransition with a delay of 5 seconds
             PauseTransition pauseTransition = new PauseTransition(Duration.seconds(5));
@@ -141,27 +218,20 @@ public class AjouterUser {
             e.printStackTrace();
         }
     }
+
     @FXML
     private void navigateToConnecterUser() {
+        try {
+            // Load the FXML file for the ConnecterUser scene
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ConnecterUser.fxml")));
 
-                try {
-                    // Load the FXML file for the ConnecterUser scene
-                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ConnecterUser.fxml")));
-
-                    // Switch to the ConnecterUser scene
-                    Login.getScene().setRoot(root);
-                } catch (IOException ex) {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("Sorry");
-                    alert.setTitle("Error");
-                    alert.show();
-                }
-
+            // Switch to the ConnecterUser scene
+            Login.getScene().setRoot(root);
+        } catch (IOException ex) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Sorry");
+            alert.setTitle("Error");
+            alert.show();
+        }
     }
-
-//    @FXML
-//    public void combinedAction(ActionEvent actionEvent) {
-//        handleRegisterButton(actionEvent);
-//        navigatetoAjouterUserAction(actionEvent);
-//    }
 }

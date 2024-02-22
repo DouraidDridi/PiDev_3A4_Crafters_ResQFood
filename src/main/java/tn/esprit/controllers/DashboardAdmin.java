@@ -32,6 +32,10 @@ public class DashboardAdmin {
     private VBox roleTilePanesContainer;
 
     @FXML
+    private Label totalUsersLabel;
+
+
+    @FXML
     void initialize() {
         // Call the getAll method to retrieve all registered users
         ServiceUser serviceUser = new ServiceUser();
@@ -39,6 +43,8 @@ public class DashboardAdmin {
 
         // Display user-specific content in TilePanes based on roles
         displayUsersInRoleTilePanes(users);
+        updateTotalRegisteredUsers();
+
     }
 
     private String getUserRole(User user) {
@@ -206,6 +212,7 @@ public class DashboardAdmin {
 
             // Update the displayed users after modification
             updateDisplayedUsers();
+            updateTotalRegisteredUsers();
         });
     }
 
@@ -237,9 +244,15 @@ public class DashboardAdmin {
             // Refresh the user display after deletion
             Set<User> updatedUsers = serviceUser.getAll();
             displayUsersInRoleTilePanes(updatedUsers);
+            updateTotalRegisteredUsers();
         });
 
         return deleteButton;
+    }
+
+    private void updateTotalRegisteredUsers() {
+        int totalUsers = ServiceUser.getTotalRegisteredUsers();
+        totalUsersLabel.setText("Total Registered Users: " + totalUsers);
     }
 
 
@@ -378,6 +391,7 @@ public class DashboardAdmin {
 
                 // Update the displayed users after addition
                 updateDisplayedUsers();
+                updateTotalRegisteredUsers();
             });
         });
 

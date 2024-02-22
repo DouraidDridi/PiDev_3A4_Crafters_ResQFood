@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class ServiceUser implements IService<User> {
 
-    Connection cnx = DataSource.getInstance().getCnx();
+    static Connection cnx = DataSource.getInstance().getCnx();
 
     @Override
     public void ajouter(User user, String role) {
@@ -288,5 +288,38 @@ public class ServiceUser implements IService<User> {
         return role;
     }
 
+
+    public boolean emailExists(String email) {
+        try {
+            String query = "SELECT COUNT(*) FROM user WHERE email = ?";
+            try (PreparedStatement preparedStatement = cnx.prepareStatement(query)) {
+                preparedStatement.setString(1, email);
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        return resultSet.getInt(1) > 0;
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception appropriately
+        }
+        return false;
+    }
+
+
+    public static int getTotalRegisteredUsers() {
+        int totalUsers = 0;
+        String query = "SELECT COUNT(*) FROM user";
+        try (PreparedStatement preparedStatement = cnx.prepareStatement(query)) {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    totalUsers = resultSet.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception appropriately
+        }
+        return totalUsers;
+    }
 
 }
