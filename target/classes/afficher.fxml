@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.Afficher">
+   <children>
+      <TableView fx:id="tab" layoutX="27.0" layoutY="25.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="224.0" prefWidth="545.0">
+        <columns>
+          <TableColumn fx:id="idR" prefWidth="50.4000244140625" text="id" />
+          <TableColumn fx:id="nomR" prefWidth="100.0" text="nom restau" />
+            <TableColumn fx:id="adresseR" prefWidth="81.60003662109375" text="adresse" />
+            <TableColumn fx:id="emailR" prefWidth="81.5999755859375" text="email" />
+            <TableColumn fx:id="phoneR" prefWidth="82.4000244140625" text="phone" />
+            <TableColumn fx:id="imageR" prefWidth="77.5999755859375" text="image" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="S_RESIZE" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>

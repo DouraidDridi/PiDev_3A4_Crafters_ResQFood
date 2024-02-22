@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.esprit.controllers.test"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label fx:id="LLpersonnes" layoutX="14.0" layoutY="28.0" prefHeight="188.0" prefWidth="353.0" text="Label" />
+    </children>
+
+</AnchorPane>
+
+
+
+        <?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.control.TextField?>
+        <?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.AjouterActualite">
+<children>
+    <TextField fx:id="TFtitre" layoutX="422.0" layoutY="67.0" promptText="titre" />
+    <TextField fx:id="TFdescription" layoutX="422.0" layoutY="124.0" promptText="description" />
+    <Button fx:id="ajouterActualiteAction" layoutX="376.0" layoutY="210.0" mnemonicParsing="false" onAction="#ajouterActualiteAction" prefHeight="26.0" prefWidth="71.0" text="ajouter" />
+    <Label layoutX="350.0" layoutY="67.0" prefHeight="26.0" prefWidth="62.0" text="Titre" />
+    <Label layoutX="349.0" layoutY="124.0" prefHeight="26.0" prefWidth="64.0" text="Description" />
+    <Button layoutX="33.0" layoutY="41.0" mnemonicParsing="false" onAction="#navigatetoAfficherActualiteAction" text="afficher" />
+    <Button fx:id="modifierActualiteAction" layoutX="481.0" layoutY="211.0" mnemonicParsing="false" onAction="#modifierActualiteAction" text="modifier" />
+
+</children>
+</AnchorPane>
+

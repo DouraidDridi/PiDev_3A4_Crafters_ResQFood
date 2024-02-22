@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.controllers.Ajout">
+   <children>
+      <Button fx:id="SaveButton" layoutX="263.0" layoutY="336.0" mnemonicParsing="false" onAction="#ajouterRestaurantAction" text="enregistrer" />
+      <TextField fx:id="adresseR" layoutX="227.0" layoutY="129.0" />
+      <Text layoutX="154.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="adresse" wrappingWidth="52.0" />
+      <Text layoutX="119.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom restaurant" wrappingWidth="92.95819091796875" />
+      <TextField fx:id="nomR" layoutX="225.0" layoutY="88.0" />
+      <Text layoutX="166.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email" wrappingWidth="38.93670654296875" />
+      <TextField fx:id="emailR" layoutX="227.0" layoutY="174.0" />
+      <Text layoutX="153.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="telephone" />
+      <TextField fx:id="numR" layoutX="228.0" layoutY="221.0" />
+      <Text layoutX="169.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="image" />
+      <TextField layoutX="228.0" layoutY="274.0" />
+      <Text layoutX="167.0" layoutY="50.0" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ajouter un restaurant" wrappingWidth="265.75823974609375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

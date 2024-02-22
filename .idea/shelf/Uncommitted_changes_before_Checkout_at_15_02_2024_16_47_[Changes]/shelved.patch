@@ -1,0 +1,17 @@
+Index: src/main/java/edu/esprit/tests/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package edu.esprit.tests;\r\n\r\n\r\nimport edu.esprit.entities.Restaurant;\r\nimport edu.esprit.service.ServiceRestau;\r\nimport edu.esprit.utils.DataSource;\r\nimport edu.esprit.service.ServiceRestau;\r\n\r\nimport java.util.Set;\r\n\r\nimport static edu.esprit.entities.Restaurant.*;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n\r\n        DataSource.getInstance() ;\r\n        ServiceRestau r=new ServiceRestau() ;\r\n        Restaurant  r1= new Restaurant(\"sarra\",\"3 rue liberte\",\"res@gmail.com\",97556241) ;\r\n        Restaurant  r2= new Restaurant(\"mmm\",\"55 rue libe\",\"mmms@gmail.com\",94788511) ;\r\n         r.ajouter(r2);\r\n        //r1.setIdR(2);\r\n       // r.modifier(r1);\r\n       // r.supprimer(2) ;\r\n\r\n        Set<Restaurant> allRestau = r.getAll();\r\n\r\n        // Display the details of each Personne\r\n        for (Restaurant res : allRestau) {\r\n            System.out.println(\"ID: \" + res.getIdR() +\r\n                    \", Nom: \" + res.getNomR() +\r\n                    \", adresse: \" + res.getAdresseR()+\r\n                   \",email: \"+res.getEmailR() +\r\n                    \", phone: \" +res.getPhoneR());\r\n        }\r\n\r\n\r\n\r\n\r\n    }\r\n\r\n}
+===================================================================
+diff --git a/src/main/java/edu/esprit/tests/Main.java b/src/main/java/edu/esprit/tests/Main.java
+--- a/src/main/java/edu/esprit/tests/Main.java	
++++ b/src/main/java/edu/esprit/tests/Main.java	
+@@ -17,7 +17,7 @@
+         ServiceRestau r=new ServiceRestau() ;
+         Restaurant  r1= new Restaurant("sarra","3 rue liberte","res@gmail.com",97556241) ;
+         Restaurant  r2= new Restaurant("mmm","55 rue libe","mmms@gmail.com",94788511) ;
+-         r.ajouter(r2);
++        // r.ajouter(r2);
+         //r1.setIdR(2);
+        // r.modifier(r1);
+        // r.supprimer(2) ;

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80d0e36e-fc72-49fb-a911-12133d76af0b" name="Changes" comment="v4" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dorraElamri&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5d30c802-9cc4-44c4-b27e-6023f4b6d7fe" />
+        <option name="url" value="https://github.com/DouraidDridi/PiDev_3A4_Crafters_ResQFood.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2cMaYb8lNUsEpQQjdOf37AXdohk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MainFX.executor": "Run",
+    "Maven.resQfood1 [clean].executor": "Run",
+    "Maven.resQfood1 [install].executor": "Run",
+    "Maven.resQfood1 [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "Maven.resQfood1 [package].executor": "Run",
+    "Maven.resQfood1 [test].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Dorra/IdeaProjects/resQfood1/src/main/java",
+    "last_opened_file_path": "C:/Users/Dorra/IdeaProjects/resQfood1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="PiDev" branch="gestionrestaurant" />
+      <force-push-target remote-path="PiDev" branch="gestionrestaurants" />
+    </force-push-targets>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80d0e36e-fc72-49fb-a911-12133d76af0b" name="Changes" comment="" />
+      <created>1707923951599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707923951599</updated>
+      <workItem from="1707923952690" duration="2827000" />
+      <workItem from="1707942723056" duration="12216000" />
+      <workItem from="1708430330572" duration="42335000" />
+      <workItem from="1708599935671" duration="29000" />
+    </task>
+    <task id="LOCAL-00001" summary="v1">
+      <option name="closed" value="true" />
+      <created>1707996152468</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707996152468</updated>
+    </task>
+    <task id="LOCAL-00002" summary="v1">
+      <option name="closed" value="true" />
+      <created>1707996592301</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707996592301</updated>
+    </task>
+    <task id="LOCAL-00003" summary="v">
+      <option name="closed" value="true" />
+      <created>1707996690963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707996690963</updated>
+    </task>
+    <task id="LOCAL-00004" summary="v">
+      <option name="closed" value="true" />
+      <created>1707996801739</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707996801739</updated>
+    </task>
+    <task id="LOCAL-00005" summary="v2">
+      <option name="closed" value="true" />
+      <created>1707996880570</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707996880570</updated>
+    </task>
+    <task id="LOCAL-00006" summary="v2">
+      <option name="closed" value="true" />
+      <created>1708012134115</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708012134115</updated>
+    </task>
+    <task id="LOCAL-00007" summary="v2">
+      <option name="closed" value="true" />
+      <created>1708012167848</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708012167848</updated>
+    </task>
+    <task id="LOCAL-00008" summary="v2">
+      <option name="closed" value="true" />
+      <created>1708012201033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708012201033</updated>
+    </task>
+    <task id="LOCAL-00009" summary="v3">
+      <option name="closed" value="true" />
+      <created>1708012228492</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708012228492</updated>
+    </task>
+    <task id="LOCAL-00010" summary="v3">
+      <option name="closed" value="true" />
+      <created>1708012323561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708012323561</updated>
+    </task>
+    <task id="LOCAL-00011" summary="v3">
+      <option name="closed" value="true" />
+      <created>1708012379272</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708012379272</updated>
+    </task>
+    <task id="LOCAL-00012" summary="v3">
+      <option name="closed" value="true" />
+      <created>1708548346526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708548346528</updated>
+    </task>
+    <task id="LOCAL-00013" summary="v3">
+      <option name="closed" value="true" />
+      <created>1708559119793</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708559119793</updated>
+    </task>
+    <task id="LOCAL-00014" summary="v3">
+      <option name="closed" value="true" />
+      <created>1708593924834</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708593924835</updated>
+    </task>
+    <task id="LOCAL-00015" summary="v4">
+      <option name="closed" value="true" />
+      <created>1708594040249</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708594040249</updated>
+    </task>
+    <task id="LOCAL-00016" summary="v4">
+      <option name="closed" value="true" />
+      <created>1708594051243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708594051243</updated>
+    </task>
+    <task id="LOCAL-00017" summary="v4">
+      <option name="closed" value="true" />
+      <created>1708594290850</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708594290850</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="PiDev/gestionrestaurants" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1" />
+    <MESSAGE value="v" />
+    <MESSAGE value="v2" />
+    <MESSAGE value="v3" />
+    <MESSAGE value="v4" />
+    <option name="LAST_COMMIT_MESSAGE" value="v4" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
