@@ -18,16 +18,16 @@
     <children>
 
         <TextField fx:id="nom" layoutX="262.0" layoutY="117.0" prefHeight="27.0" prefWidth="276.0" promptText="Nom" styleClass="text-field" />
-        <Text fx:id="nomError" layoutX="271.0" layoutY="164.0" styleClass="error-text" wrappingWidth="221.0" />
+        <Text fx:id="nomError" fill="RED" layoutX="271.0" layoutY="164.0" styleClass="error-text" wrappingWidth="221.0" />
 
         <TextField fx:id="prenom" layoutX="262.0" layoutY="174.0" prefHeight="25.0" prefWidth="276.0" promptText="Prenom" styleClass="text-field" />
-        <Text fx:id="prenomError" layoutX="271.0" layoutY="219.0" styleClass="error-text" wrappingWidth="189.0" />
+        <Text fx:id="prenomError" fill="RED" layoutX="271.0" layoutY="219.0" styleClass="error-text" wrappingWidth="189.0" />
 
         <TextField fx:id="email" layoutX="262.0" layoutY="227.0" prefHeight="25.0" prefWidth="276.0" promptText="Email" styleClass="text-field" />
-        <Text fx:id="emailError" layoutX="269.0" layoutY="267.0" styleClass="error-text" wrappingWidth="203.0" />
+        <Text fx:id="emailError" fill="RED" layoutX="269.0" layoutY="267.0" styleClass="error-text" wrappingWidth="203.0" />
 
-        <PasswordField fx:id="password" layoutX="262.0" layoutY="281.0" prefHeight="25.0" prefWidth="276.0" promptText="Password" styleClass="password-field" />
-        <Text fx:id="passwordError" layoutX="271.0" layoutY="325.0" styleClass="error-text" wrappingWidth="221.0" />
+        <PasswordField fx:id="password" layoutX="262.0" layoutY="276.0" prefHeight="25.0" prefWidth="276.0" promptText="Password" styleClass="password-field" />
+        <Text fx:id="passwordError" fill="RED" layoutX="271.0" layoutY="320.0" styleClass="error-text" wrappingWidth="221.0" />
 
         <ChoiceBox fx:id="roleChoiceBox" layoutX="325.0" layoutY="328.0" prefWidth="150.0" styleClass="choice-box" />
         <Button fx:id="registerButton" layoutX="364.0" layoutY="367.0" onAction="#handleRegisterButton" styleClass="register-button" text="Sign Up" />

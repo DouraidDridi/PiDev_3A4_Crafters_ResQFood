@@ -65,7 +65,7 @@ public class AjouterUser {
 
     @FXML
     void initialize() {
-        roleChoiceBox.getItems().addAll("User", "Donateur", "RespRestau", "RespAssoc", "Livreur", "Agriculteure");
+        roleChoiceBox.getItems().addAll("User", "Donateur", "RespRestau", "RespAssoc",  "Agriculteure");
     }
 
     private boolean isValidEmail(String email) {
@@ -85,7 +85,7 @@ public class AjouterUser {
     @FXML
     void handleRegisterButton(ActionEvent event) {
         clearErrorMessages(); // Clear previous error messages
-        loadingIndicator.setVisible(true);
+
 
         String nomValue = nom.getText();
         String prenomValue = prenom.getText();
@@ -159,7 +159,7 @@ public class AjouterUser {
                 serviceUser.ajouter(newUser, selectedRole);
                 // Show a success message
                 successMessage.setText("User added successfully!");
-
+                loadingIndicator.setVisible(true);
                 // if register success, navigate to login
                 ActionEvent actionEvent = new ActionEvent();
                 navigatetoAjouterUserAction(actionEvent);
