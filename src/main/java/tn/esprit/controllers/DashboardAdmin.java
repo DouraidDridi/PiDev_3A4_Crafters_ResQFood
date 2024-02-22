@@ -48,9 +48,7 @@ public class DashboardAdmin {
     }
 
     private String getUserRole(User user) {
-        // Add logic to retrieve the role from the database based on user information
-        // This might involve querying your database, as you did in the ServiceUser class
-        // For simplicity, I'll assume you have a method in ServiceUser to get the role
+
         ServiceUser serviceUser = new ServiceUser();
         return serviceUser.getUserRole(user.getEmail());
     }

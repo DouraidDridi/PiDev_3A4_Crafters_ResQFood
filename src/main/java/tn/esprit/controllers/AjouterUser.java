@@ -123,10 +123,9 @@ public class AjouterUser {
         }
 
         try {
-            // Rest of your code for user creation and database interaction
 
             if (validateInputs()) {
-                // Rest of your code for user creation and database interaction
+                // Rest of  code for user creation and database interaction
                 User newUser;
 
                 switch (selectedRole) {

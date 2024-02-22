@@ -87,7 +87,6 @@ public class ConnecterUser {
                 pauseTransition.play();
             } else {
                 // Authentication failed, show an error message
-                // Authentication failed, show an error message
                 errorText.setText("Authentication failed!");
 
 
@@ -99,8 +98,6 @@ public class ConnecterUser {
 
             }
         } catch (Exception e) {
-            // Handle any exceptions
-
             // Close loading indicator in case of an exception
             loadingIndicator.setVisible(false);
 
