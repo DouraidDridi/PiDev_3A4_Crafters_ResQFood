@@ -84,7 +84,7 @@ public class DashboardAdmin {
                 VBox userContainer = new VBox();
                 userContainer.setStyle("-fx-border-color: #000000; -fx-padding: 10px;");
 
-                Label idLabel = new Label("ID: " + user.getId());
+//                Label idLabel = new Label("ID: " + user.getId());
                 Label nameLabel = new Label("Nom: " + user.getNom());
                 Label prenomLabel = new Label("Prénom: " + user.getPrenom());
                 Label emailLabel = new Label("Email: " + user.getEmail());
@@ -96,7 +96,7 @@ public class DashboardAdmin {
                 Button deleteButton = createDeleteButton(user);
 
                 // You can customize the labels and container styles, fonts, etc. as needed
-                userContainer.getChildren().addAll(idLabel, nameLabel, prenomLabel, emailLabel, passwordLabel, roleLabel, modifyButton, deleteButton);
+                userContainer.getChildren().addAll( nameLabel, prenomLabel, emailLabel, passwordLabel, roleLabel, modifyButton, deleteButton);
                 roleTilePane.getChildren().add(userContainer);
             }
 
